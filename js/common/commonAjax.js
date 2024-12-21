@@ -28,7 +28,7 @@ function commonAjax(svcId, type, url, inData, errorMsg, callback) {
 	var ajaxOptions = {
 		type: type,
 		url: url,
-		data: inData,
+		data: JSON.stringify(inData),
 		/*dataType: "json",*/
 		success: function(data) {
             if (data) {
