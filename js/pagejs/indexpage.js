@@ -6,6 +6,16 @@ document.getElementById('apiTest').addEventListener('click', () => {
     commonAjax("svcId", "POST", "/api/test", {}, "onload error", fnCallback("test"))
 });
 
+document.getElementById('x_link').addEventListener('click', () => { 
+    fn_x_link();
+});
+
+document.getElementById('insta_link').addEventListener('click', () => { 
+    fn_insta_link();
+});
+
+/* */
+
 function fnCallback(svcId) {
     return function(data) {
         if (svcId === "onload") {
@@ -42,3 +52,13 @@ function fnCallback2(svcId, data) {
     }
     console.log(data);
 };
+
+/* X link */
+function fn_x_link() {
+    window.open('https://x.com/doowarf_Works', '_blank');
+}
+
+/* insta link */
+function fn_insta_link() {
+    window.open('https://www.instagram.com/doowarf.works/', '_blank');
+}
